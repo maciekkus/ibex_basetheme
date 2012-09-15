@@ -1,0 +1,66 @@
+/*
+Theme Name: IBEX Theme
+Theme URI: 
+Description: 
+Version: 1.0
+Author: ibex.pl
+*/
+
+a:focus {
+  border: none !important;
+}
+
+.clearfix:after {
+        content:".";
+        display:block;
+        height:0;
+        clear:both;
+        visibility:hidden;
+}
+.clearfix { display:inline-block; }
+/* Hide from IE Mac \*/
+.clearfix {display:block;}
+/* End hide from IE Mac */
+
+body {
+    margin:0;
+    padding: 0px;
+    font-family: Arial;
+}
+a,a:visited{
+  color: #453F27;
+  text-decoration: none;
+}
+a:hover {
+  color: #122C41;
+  text-decoration: underline;
+}
+
+.container {
+  margin: 0 auto;
+}
+.rounded-border {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.shadow {
+  -moz-box-shadow: 0px 0px 3px #333;
+  -webkit-box-shadow: 0px 0px 3px #333;
+  box-shadow: 0px 0px 3px #333;
+}
+#content {
+}
+#content #main {
+}
+#content #sidebar {
+}
+#content #sidebar .block {
+}
+#content #sidebar .block + .block {
+}
+
+#footer {
+  padding: 10px;
+  font-size: 0.8em;
+}
