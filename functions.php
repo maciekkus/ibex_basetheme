@@ -403,7 +403,7 @@ function ibex_base_parseCDNImages($text) {
  * bwp-minify plugin (modified with hooks)
  */ 
 
- define ('STATIC_PATH','static/');
+define ('STATIC_PATH','static/');
 function cache_minify_url($url) {
 	$url_hash = md5($url);
 	$minify_dir = ABSPATH . STATIC_PATH;
