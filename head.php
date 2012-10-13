@@ -8,7 +8,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title><?php wp_title('');?></title>
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<?php wp_head(); ?>	
-<!--	<script src="<?php echo get_template_directory_uri(); ?>/js/libs/modernizr-2.6.min.js"></script> -->
+	<?php wp_head(); ?>
 	<?php get_template_part( 'custom', 'head' ); ?>
 </head>
