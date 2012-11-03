@@ -15,8 +15,9 @@ $current_template_directory_uri = get_stylesheet_directory_uri();
 /* includes */
 include ('lib/wordpress.snippets.php');
 
-include ('wp-ibex/ibex-post-shortcodes.php');
-include ('wp-ibex/ibex-post-snippets.php');
+include ('features/custom-shortcodes.php');
+include ('features/snippets-post-images.php');
+
 
 include ('features/facebook-gplus-loader.php');
 include ('features/custom-title-post-page.php');
