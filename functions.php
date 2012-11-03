@@ -108,6 +108,7 @@ function baseibex_enqueue() {
 		/* base theme default javascript */
 		baseibex_enqueue_script('base_script', '/js/script.js', Array('jquery'));
 
+		baseibex_enqueue_script('plugins_script', '/js/plugins.js', Array('jquery'));
 		/* base theme default css */
 		if (!baseibextheme_option('disable_base_style',false)) {
 	    	baseibex_enqueue_style('base_style', '/css/main.css'); // html5boilerplate
@@ -124,8 +125,8 @@ function baseibex_enqueue() {
 	    childtheme_enqueue_style('theme_style', '/style.css');
     }
 }
-
-add_action('wp_enqueue_scripts', 'baseibex_enqueue');
+add_action('wp_loaded', 'baseibex_enqueue',0);
+//add_action('wp_enqueue_scripts', 'baseibex_enqueue',0);
 
 add_filter( 'script_loader_src', 'remove_src_version' );
 add_filter( 'style_loader_src', 'remove_src_version' );
