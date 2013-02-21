@@ -9,7 +9,7 @@ function enable_nivoslider($default_theme = false) {
   return;	
 }
 
-function enable_carouFredSel() {
-  baseibex_enqueue_script('carouFredSel','/addons/sliders/carousel/jquery.carouFredSel-6.1.0-packed.js',Array('jquery'));
+function enable_carouFredSel($version = '6.2.0') {
+  baseibex_enqueue_script('carouFredSel','/addons/sliders/carousel/jquery.carouFredSel-'.$version.'-packed.js',Array('jquery'));
   return;	
 }

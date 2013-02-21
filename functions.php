@@ -174,15 +174,19 @@ function default_page_header() {
 	if ($post_title = get_post_meta($post->ID, '_ibex_post_title',true)) {}
 	  else { $post_title = get_the_title(); } 
 	
-	echo apply_filters('default_page_h1','<header><h1><a href="'.get_permalink().'">'.$post_title.'</a></h1>'.default_page_meta()."</header>");
+	echo apply_filters('default_page_h1','<header><h1>'.$post_title.'</h1>'.default_page_meta()."</header>");
 }
 
 function default_post_header() {
 	global $post;
 	if ($post_title = get_post_meta($post->ID, '_ibex_post_title',true)) {}
 	  else { $post_title = get_the_title(); } 
-	
-	echo apply_filters('default_post_h1','<header><h1><a href="'.get_permalink().'">'.get_the_title().'</a></h1>'.default_post_meta()."</header>");
+	if (is_single()) {
+		echo apply_filters('default_post_h1','<header><h1>'.get_the_title().'</h1>'.default_post_meta()."</header>");
+	} else {
+		echo apply_filters('default_post_h1','<header><h1><a href="'.get_permalink().'">'.get_the_title().'</a></h1>'.default_post_meta()."</header>");
+	}
+	return;
 }
 
 function default_post_meta() {

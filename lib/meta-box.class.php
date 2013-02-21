@@ -106,7 +106,11 @@ class ibex_meta_box {
     }
 }
 
-/* auto-install meta boxes */
-foreach ($meta_boxes as $meta_box) {
-    $my_box = new ibex_meta_box($meta_box);
+function auto_install_meta_boxes() {
+    /* auto-install meta boxes */
+    global $meta_boxes;
+    foreach ($meta_boxes as $meta_box) {
+        $my_box = new ibex_meta_box($meta_box);
+    }
 }
+add_action('wp_loaded','auto_install_meta_boxes');
