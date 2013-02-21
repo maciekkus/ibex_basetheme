@@ -23,8 +23,14 @@ include ('features/facebook-gplus-loader.php');
 include ('features/custom-title-post-page.php');
 
 /* load metaboxes class */
-include ('lib/meta-box.class.php');
- 
+add_action( 'init', 'cmb_initialize_cmb_meta_boxes', 9999 );
+function cmb_initialize_cmb_meta_boxes() {
+    if (!class_exists('cmb_Meta_Box')) {
+        require_once ('lib/custom-meta-boxes/init.php');
+    }
+}
+
+
 /* load functions for enabling/disabling addons */
 include ('addons/addons.inc.php');
 
